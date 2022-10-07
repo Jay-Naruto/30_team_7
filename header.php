@@ -58,10 +58,12 @@
                         <li class="dropdown">
                             <a class="dropbtn" href="javascript:void(0)">Services <span>&#11167;</span></a>
                             <div class="dropdown-content">
-								<a href="http://127.0.0.1/php%20CAREERLY/login.php">Career Prediction</a>
-                                <a href="http://127.0.0.1/php%20CAREERLY/courses.php">Courses</a>
-                                <a href="http://127.0.0.1/php%20CAREERLY/blog.php">Career Roadmap</a>
-                                <a href="http://127.0.0.1/resume.html">Resume Maker</a>
+								<a href="http://127.0.0.1/cgs2/login.php">Career Prediction</a>
+                                <a href="http://127.0.0.1/cgs2/courses.php">Courses</a>
+                                <a href="http://127.0.0.1/cgs2/blog.php">Career Roadmap</a>
+                                <a href="http://127.0.0.1/cgs2/resume.php">Resume Maker</a>
+                                <a href="http://127.0.0.1:5000/consultancy">Consultancy</a>
+
 								
                             </div>
                         </li>
@@ -89,7 +91,9 @@
 								<a href="http://127.0.0.1:5000/">Career Prediction</a>
                                 <a href="courses.php">Courses</a>
                                 <a href="blog.php">Career Roadmap</a>
-                                <a href="resume.html">Resume Maker</a>
+                                <a href="http://127.0.0.1/cgs2/resume.php">Resume Maker</a>
+                                <a href="http://127.0.0.1:5000/consultancy">Consultancy</a>
+
 
 								
                             </div>

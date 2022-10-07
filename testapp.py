@@ -5,6 +5,8 @@ import numpy as np
 import os
 import sys
 from serpapi import GoogleSearch
+from linkedin_api import Linkedin
+import MySQLdb 
 app = Flask(__name__)
 
 arr=[]
@@ -12,10 +14,23 @@ arr2=[]
 arr3=[]
 arr4=[]
 
+db = MySQLdb.connect("localhost", "root", "", "my_db") 
+curs=db.cursor() 
 
+# for x in reading:
+#   print(x[1])
 @app.route('/')
 def career():
+
     return render_template("hometest.html")
+
+
+@app.route('/consultancy')
+def consult():
+   
+    curs.execute("SELECT * from expert")
+    reading = curs.fetchall()
+    return render_template("consult.html",reading=reading)
 
 @app.route('/course',methods = ['GET','POST'])
 def course():
