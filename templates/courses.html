@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <body>
+      <!-- Hero-area -->
+      <div class="hero-area section">
+        <!-- Backgound Image -->
+        <div
+          class="bg-image bg-parallax overlay"
+          style="background-image: url(./img/bgc2.jpg)"
+        ></div>
+        <!-- /Backgound Image -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <ul class="hero-area-tree">
+                <li><a href="main.php">Home</a></li>
+                <li>Courses</li>
+              </ul>
+              <h1 class="white-text">Get Started</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Hero-area -->
+
+      <!-- Courses -->
+      <div id="courses" class="section">
+        <!-- container -->
+        <div class="container">
+          <!-- row 
+				<div class="row">
+					<div class="section-header text-center">
+						<h2>Explore Courses</h2>
+						<p class="lead">Libris vivendo eloquentiam ex ius, nec id splendide abhorreant.</p>
+					</div>
+				</div>
+				 -->
+
+          <!-- tags widget -->
+       
+          <!-- /tags widget -->
+
+          <!-- courses -->
+          <hr class="section-hr" id="web" />
+          <div id="courses-wrapper">
+            <div></div>
+            <!-- row -->
+            <div class="row">
+              <div class="section-header text-center">
+				{{j}}
+        <div>
+         
+          <div>
+          </div>
+         <canvas id="myChart" style="width:100%;max-width:800px;"></canvas>
+          <script>
+
+      
+            
+            new Chart("myChart", {
+              type: "line",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  fill: false,
+                  lineTension: 0,
+                  backgroundColor: "rgba(0,0,255,1.0)",
+                  borderColor: "rgba(0,0,255,0.1)",
+                  data: yValues
+                }]
+              },
+              options: {
+                legend: {display: false},
+                scales: {
+                  yAxes: [{ticks: {min: 6, max:100}}],
+                }
+              }
+            });
+            </script>
+        </div>
+        <div>
+          <h1>Jobs</h1>
+          <!-- For loop logic of jinja template -->
+          {%for i in arr3%}
+
+
+          <div style="display:flex;justify-content:space-evenly;align-items:center;width:100%;text-align:center;flex-directon:row">
+  <div>
+
+  <div>
+    <h2>{{i['Title']}}</h2>
+ 
+  </div>
+  <div>
+    <h3>{{i['Company']}}</h3>
+  
+    </div>
+    <div>
+      {{i['Descp']}}
+    
+      </div>
+    <div>
+      			
+		
+    
+      </div>
+</div>
+
+</div>
+  <br></br>
+          {%endfor%}
+        </div>
+        <ol>
+          <h1>Blogs</h1>
+
+          <!-- For loop logic of jinja template -->
+          {%for i in arr%}
+
+
+          <div style="display:flex;justify-content:center;align-items:center;width:100%;text-align:center">
+  <div>
+
+  <div>
+    <h2>{{i['Title']}}</h2>
+ 
+  </div>
+  <div>
+    <p>{{i['Snip']}}</p>
+  
+    </div>
+    <div>
+      <a href={{i['Link']}}>{{i['Link']}}
+      </a>
+    
+      </div>
+</div>
+
+</div>
+  <br></br>
+          {%endfor%}
+        </ol>
+                <ol>
+          <h1>Courses</h1>
+
+                  <!-- For loop logic of jinja template -->
+                  {%for i in arr2%}
+
+
+                  <div style="display:flex;justify-content:center;align-items:center;width:100%;text-align:center">
+					<div>
+
+					<div>
+            <a href={{i['Link']}}>
+					<img src={{i['Img']}} alt=""/>
+        </a>
+					</div>
+					<div>
+					{{i['Title']}}
+
+					</div>
+				</div>
+
+				</div>
+				  <br></br>
+                  {%endfor%}
+                </ol>
+              </div>
+
+              <!-- single course -->
+             
+              <!-- /single course -->
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /courses -->
+
+          <!--<div class="row">
+					<div class="center-btn">
+						<a class="main-button icon-button" href="#">More Courses</a>
+					</div>
+				</div>-->
+        </div>
+        <!-- container -->
+      </div>
+    </body>
+    <script></script>
+  </head>
+</html>
