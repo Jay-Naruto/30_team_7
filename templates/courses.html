@@ -100,8 +100,10 @@ box-shadow:  5px 5px 10px #b7d1d3,
   margin-bottom: 35px;
 }
 .global-label-text{
-  font-size:18px;
+  font-size:38px;
   font-weight:700;
+  position:relative;
+  bottom:20px;
   color:#365A5E;
 }
 .score{
@@ -1452,30 +1454,175 @@ body {
 }
 
 
-
-
-
-
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+  }
+  
+  .grid > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .grid > article img {
+    max-width: 100%;
+  }
+  
+  .grid .text {
+    padding: 20px;
+  }
+  
+
+
+
+.grid2 {
+    display:flex;
+    flex-direction:column;
+    justify-contents:center;
+    align-items:center;
 }
 
-.grid > article {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+.grid2 > article {
+ 
 }
 
-.grid > article img {
+.grid2 > article img {
   max-width: 100%;
 }
 
-.grid .text {
-  padding: 20px;
+.grid2 .text {
+  
 }
 
+
+.img {
+    max-width: 100%;
+    display: block;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  /* Utilities */
+  .card7::after,
+  .card7 img {
+    border-radius: 50%;
+  }
+  body,
+  .card7,
+  .stats {
+    display: flex;
+  }
+  
+  .card7 {
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+    margin: 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+  }
+  .card7::before,
+  .card7::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  .card7::before {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    top: -.7rem;
+    left: -.7rem;
+  }
+  .card7::after {
+    height: 15rem;
+    width: 15rem;
+    background-color: #4172f5aa;
+    top: -8rem;
+    right: -8rem;
+    box-shadow: 2rem 6rem 0 -3rem #FFF
+  }
+  
+  .card7 img {
+    width: 8rem;
+    min-width: 80px;
+    box-shadow: 0 0 0 5px #FFF;
+  }
+  
+  .infos {
+    margin-left: 1.5rem;
+  }
+  
+  .name {
+    margin-bottom: 1rem;
+  }
+  .name h2 {
+    font-size: 1.3rem;
+  }
+  .name h4 {
+    font-size: .8rem;
+    color: #333
+  }
+  
+  .text {
+    font-size: .9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stats {
+    margin-bottom: 1rem;
+  }
+  .stats li {
+    min-width: 5rem;
+  }
+  .stats li h3 {
+    font-size: .99rem;
+  }
+  .stats li h4 {
+    font-size: .75rem;
+  }
+  
+  .links button {
+    font-family: 'Poppins', sans-serif;
+    min-width: 120px;
+    padding: .5rem;
+    border: 1px solid #222;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .25s linear;
+  }
+  .links .follow,
+  .links .view:hover {
+    background-color: #222;
+    color: #FFF;
+  }
+  .links .view,
+  .links .follow:hover{
+    background-color: transparent;
+    color: #222;
+  }
+  
+  @media screen and (max-width: 450px) {
+    .card7 {
+      display: block;
+    }
+    .infos {
+      margin-left: 0;
+      margin-top: 1.5rem;
+    }
+    .links button {
+      min-width: 100px;
+    }
+  }
+  
 
 
     </style>
@@ -1604,7 +1751,7 @@ body {
           </div>
 
           <div class="card-link">
-              <a href={{i['Link']}} title="Read Full"><span>Read Full</span></a>
+              <a href={{i['Link']}} target="_blank" title="Read Full"><span>Read Full</span></a>
           </div>
       </div>
 
@@ -1640,6 +1787,50 @@ body {
             {%endfor%}
           </main>
           </div>
+          <br></br>
+          <br></br>
+      <div  class='faq'>
+        <div class="global-label">
+          <h1 class="global-label-text">Connections</h1>
+        </div>
+      </div>
+          <div class="container" style="padding-left: 10%; padding-right:10%">
+            <main class="grid2">
+              {%for i in reading%}
+              <article>
+                
+                <div class="text">
+                 
+                  </div>
+              </article>
+              <div class="card7">
+                <div class="img">
+                        <img src={{i[6]}} alt="">
+                    
+                </div>
+                <div class="infos">
+                  <div class="name">
+                    <h2>{{i[1]}}</h2>
+                    <h4>{{i[2]}}</h4>
+                  </div>
+                  <div class="text">
+                    <h4>{{i[3]}}</h4>
+                  </div>
+                  <div class="text">
+                    <h4>{{i[4]}}</h4>
+                  </div>
+               
+                  <div class="links">
+                 
+                    <a href={{i[5]}} target= "_blank">
+                    <button class="view">View profile</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {%endfor%}
+            </main>
+            </div>
       
 
                 

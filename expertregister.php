@@ -21,7 +21,24 @@
     </style>
 </head>
 <body>
+     <!--Header-->
+ <header id="header" class="transparent-nav" style="position: fixed;background-color: rgb(124,152,179); top: 0;">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="main.php" style="padding-bottom: 10px;">Career Space</a>
+					</div>
+					<!-- /Logo -->
+
+				</div>
+			</div>
+		</header>
+        
+		<!-- /Header -->
 	<center>
+    <div class="wrapper" >
 		<h1>Expert Login</h1>
 		<form action="expertregister.php" method="post">
 			
@@ -57,12 +74,14 @@
 			<label for="num">Number:</label>
 			<input type="text" name="num" id="num">
 			</p>
-			<input type="submit" value="Submit">
+			<div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" class="btn btn-secondary ml-2" value="Reset">
+            </div>
+            <p style="font-size: 16px;">Already have an account? <a href="expertlogin.php" style="color: blue;">Login here</a>.</p>
             <input type=hidden name=s value=1> 
 		</form>
-        <a href="expertlogin.php">
-          Want to sign in?
-        </a>
+        </div>
 	</center>
 
 

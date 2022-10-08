@@ -22,8 +22,24 @@
   </head>
   
 <body>
-<header>
-  <h1 id="mfa">Expert Login</h1>
+   <!--Header-->
+   <header id="header" class="transparent-nav" style="position: fixed;background-color: rgb(124,152,179); top: 0;">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a class="logo" href="main.php" style="padding-bottom: 10px;">Career Space</a>
+					</div>
+					<!-- /Logo -->
+
+				</div>
+			</div>
+		</header>
+        
+		<!-- /Header -->
+
+  <h1 id="mfa"></h1>
 
 
 </header>
@@ -34,23 +50,27 @@
 
     <br>
 
-    <div class="panel" align=center>
+    <div class="wrapper" align=center>
         <form action="expertauth.php" method="POST">
             <table cellpadding=5>
-                <tr> <td> LinkedinID :
+                <tr> <td> <b>Username :</b>
               <td><input class="contact-form-text" type="text" name="linkedinid" > 
-            <tr> <td> Password :
+              <tr><td>
+            <tr> <td> <b>Password :</b>
               <td><input  class="contact-form-text" type="password" name="password" >
                 <tr><td>
             <tr><td colspan=2 align=center>
 
-            <input class="contact-form-btn" type=submit name="Login">
+            <!-- <input class="contact-form-btn" type=submit name="Login"> -->
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
         </table>
             <input type="hidden" name=s value=1>
+            <p style="font-size: 16px;">Don't have an account? <a href="expertregister.php" style="color:blue;">Sign up now</a>.</p>
+            <!-- <p style="font-size: 16px;">Forgot Password? <a href=".php" style="color:blue;">click here</a>.</p> -->
+
         </form> 
-        <a href="expertregister.php">
-          Want to sign up?
-        </a>
     </div>
 
 </body>

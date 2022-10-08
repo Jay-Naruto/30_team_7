@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <?php include 'header.php'?>
+
+    <script>
+      function showText(toggleText) {
+        toggleText.classList.toggle("active");
+      }
+    </script>
+
+    <link rel="stylesheet" href="css/production.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/s.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Comfortaa", cursive;
+      }
+
+      .container5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 40px;
+        min-height: 100vh;
+        background-color: #e9edf1;
+      }
+
+      .card {
+        background: #287bff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        width: 320px;
+        height: 450px;
+        margin: 30px;
+        border-radius: 20px;
+        border-bottom-left-radius: 160px;
+        border-bottom-right-radius: 160px;
+        box-shadow: 0 15px 0 #fff, inset 0 -15px 0 rgba(255, 255, 255, 0.24),
+          0 45px 0 rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: -140px;
+        left: -40%;
+        padding: 0;
+        width: 100%;
+        height: 120%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2)
+        );
+        transform: rotate(35deg);
+        pointer-events: none;
+        filter: blur(5px);
+      }
+
+      .card {
+        background: linear-gradient(to bottom, #24ff72, #9a4eff);
+      }
+
+      .card .icon {
+        position: relative;
+        width: 140px;
+        height: 120px;
+        background: #3c2846;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        box-shadow: 0 15px 0 rgba(0, 0, 0, 0.1), inset 0 -8px 0 #fff;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .card .icon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border-top-right-radius: 50px;
+        box-shadow: 15px -15px 0 15px #3c2846;
+      }
+
+      .card .icon::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -50px;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border-top-left-radius: 50px;
+        box-shadow: -15px -15px 0 15px #3c2846;
+      }
+
+      .card .icon ion-icon {
+        color: #fff;
+        position: relative;
+        font-size: 6em;
+        z-index: 1000;
+        --ionicon-stroke-width: 24px;
+      }
+
+      .card .content {
+        position: absolute;
+        width: 100%;
+        padding: 30px;
+        padding-top: 150px;
+        text-align: center;
+      }
+
+      .card .content h2 {
+        font-size: 1.8em;
+        color: #fff;
+        margin-bottom: 15px;
+      }
+
+      .card .content p {
+        color: #fff;
+        line-height: 1.5em;
+      }
+
+      .card-category-1 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 100px;
+        flex-wrap: wrap;
+      }
+      .basic-card {
+        transition: box-shadow 0.3s;
+
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+        float: left;
+      }
+      .basic-card:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+      }
+      .basic-card {
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        width: 200px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+      }
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-title {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+      .card-text {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+      .card-link {
+        font-size: 12px;
+        background-color: white;
+        color: black;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 20px;
+      }
+      .person-icon {
+        width: 90px;
+        position: relative;
+        bottom: 50px;
+        height: auto;
+        border-radius: 50%;
+      }
+      a {
+        text-decoration: none;
+        color: white !important;
+      }
+    </style>
+    <body style="text-align: center">
+      <h1>Meet our Experts</h1>
+      <h5>Get a premium and ask experts your doubts!</h5>
+
+      <div class="container5">
+        {%for i in reading%}
+        <a href="http://localhost/cgs2/premium.php" title="Read Full">
+          <div class="card">
+            <div class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+            <div class="content">
+              <h2>{{i[4]}}</h2>
+              <p>{{i[3]}}</p>
+              <span class="card-text">
+                <a target="_blank" href="https://www.linkedin.com/in/{{i[1]}}">
+                  LinkedIn
+                </a>
+              </span>
+            </div>
+          </div>
+        </a>
+        {%endfor%}
+      </div>
+
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    </body>
+  </head>
+</html>

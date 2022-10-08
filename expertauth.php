@@ -31,7 +31,7 @@ if (isset($_POST['s']))
         if ($linkedinid == $dbuname && $password == $dbpassword)
           {
             echo "Success in login";
-            echo "<form id='auth' action='experthome.php' method='POST' >
+            echo "<form id='auth' action='http://127.0.0.1:5000/dashboard' method='POST' >
     <input type='hidden' name='logincheck' value=1>
     <input type=hidden name='username' value='$username'>
 

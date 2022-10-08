@@ -155,6 +155,189 @@ box-shadow: 0 0 11px rgba(33,33,33,.2);
 a{
   text-decoration:none;
 }
+* {
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+.container5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  min-height: 100vh;
+  background-color: #e9edf1;
+}
+
+.card {
+  background: #287bff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 320px;
+  height: 700px;
+  margin: 30px;
+  border-radius: 20px;
+  border-bottom-left-radius: 160px;
+  border-bottom-right-radius: 160px;
+  box-shadow: 0 15px 0 #fff, inset 0 -15px 0 rgba(255, 255, 255, 0.24),
+    0 45px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: -40%;
+  padding: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2)
+  );
+  transform: rotate(35deg);
+  pointer-events: none;
+  filter: blur(5px);
+}
+
+.card {
+  background: linear-gradient(to bottom, #24ff72, #9a4eff);
+}
+
+.card .icon {
+  position: relative;
+  width: 140px;
+  height: 120px;
+  background: #3c2846;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 15px 0 rgba(0, 0, 0, 0.1), inset 0 -8px 0 #fff;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card .icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-top-right-radius: 50px;
+  box-shadow: 15px -15px 0 15px #3c2846;
+}
+
+.card .icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-top-left-radius: 50px;
+  box-shadow: -15px -15px 0 15px #3c2846;
+}
+
+.card .icon ion-icon {
+  color: #fff;
+  position: relative;
+  font-size: 6em;
+  z-index: 1000;
+  --ionicon-stroke-width: 24px;
+}
+
+.card .content {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  padding-top: 150px;
+  text-align: center;
+}
+
+.card .content h2 {
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.card .content p {
+  color: #fff;
+  line-height: 1.5em;
+}
+
+.card-category-1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+.basic-card {
+  transition: box-shadow 0.3s;
+
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+}
+.basic-card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+.basic-card {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  width: 200px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-title {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.card-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.card-link {
+  font-size: 12px;
+  background-color: white;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 20px;
+}
+.person-icon {
+  width: 90px;
+  position: relative;
+  bottom: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+a {
+  text-decoration: none;
+  color:white !important;
+}
     </style>
     <script>
         var yourNumber = "9869503214"
@@ -168,47 +351,45 @@ var yourMessage = "Hello!"
 </head>
 <body style="display:flex;flex-direction: row;justify-content: center;align-items: center;">
    
-      <div class="card-category-1">
-        {%for i in reading%}
-
-        <div class="basic-card basic-card-aqua">
-            <img class="person-icon" src="https://icon-library.com/images/person-image-icon/person-image-icon-17.jpg" alt=""/>                
-            <div class="card-content">
-                <span class="card-title">{{i[4]}}</span>
-                <span class="card-text">{{i[3]}}</span>
-                <span class="card-text">
-                    <a target="_blank" href='https://www.linkedin.com/in/{{i[1]}}'>
+   
+   
+      {%for i in reading%}
+        <a href="http://localhost/cgs2/premium.php" title="Read Full">
+          <div class="card">
+            <div class="icon">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+            <div class="content">
+              <h2>{{i[4]}}</h2>
+              <p>{{i[3]}}</p>
+              <span class="card-text">
+                <a target="_blank" href="https://www.linkedin.com/in/{{i[1]}}">
                   {{i[1]}}
-             
-                    </a>
-                </span>
-                
-
-                
-               
-            </div>
-             <hr></hr>
-            <div class="card-link">
-              <button style="margin-top: 20px;" class="go-home">
-                <a target="_blank"  href="https://p2p.mirotalk.com/join/">
-                    Video Chat
                 </a>
-                </button>
-                <div>
-                    <h6>Open video chat and make a custom code and send it to the consultant 
-                    <br></br>
-                    Text them for queries
-                </h6>
-                </div>
-                <button class="go-home">
-                    <a target="_blank"  href="https://api.whatsapp.com/send?phone= + +918291867211 + '&text=%20'">
-                        Chat
-                    </a>
-                    </button>
-
+              </span>
+              <div class="card-8">
+                <button style="margin-top: 20px;" class="go-home">
+                  <a target="_blank"  href="https://p2p.mirotalk.com/join/">
+                      Video Chat
+                  </a>
+                  </button>
+                  <div>
+                      <h6>Open video chat and make a custom code and send it to the consultant 
+                      <br></br>
+                      Text them for queries
+                  </h6>
+                  </div>
+                  <button class="go-home">
+                      <a target="_blank"  href="https://api.whatsapp.com/send?phone= + +918291867211 + '&text=%20'">
+                          Chat
+                      </a>
+                      </button>
+  
+              </div>
             </div>
-        </div>
-      {%endfor%}
+          </div>
+        </a>
+        {%endfor%}
       
       
       

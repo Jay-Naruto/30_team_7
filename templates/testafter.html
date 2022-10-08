@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Intelligent Career Guidance System</title>
+		<title>Career Space System</title>
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
@@ -29,7 +29,7 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a class="logo" href="http://127.0.0.1/php%20CAREERLY/main.php">Career Space</a>
+						<a class="logo" href="http://127.0.0.1/cgs2/main.php">Career Space</a>
 					</div>
 					<!-- /Logo -->
 
@@ -51,22 +51,23 @@
 					<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-						<li><a href="http://127.0.0.1/php%20CAREERLY/main.php">Home</a></li>
+						<li><a href="http://127.0.0.1/cgs2/main.php">Home</a></li>
                         <li class="dropdown">
                             <a class="dropbtn" href="javascript:void(0)">Services <span> &#11167;</span></a>
                             <div class="dropdown-content">
 								<a href="http://127.0.0.1:5000/">Career Prediction</a>
-                                <a href="http://127.0.0.1/php%20CAREERLY/courses.php">Courses</a>
-                                <!--<a href="http://127.0.0.1/php%20CAREERLY/blog.php">Blogs</a>
-                                <a href="http://127.0.0.1/php%20CAREERLY/daily_bytes.php">Daily bytes</a>
-                                <a href="http://127.0.0.1/php%20CAREERLY/community.php">Community</a>-->
-								<a href="http://127.0.0.1/php%20CAREERLY/blog.php">Career Roadmap</a>
-								<a href="http://127.0.0.1/php%20CAREERLY/faq.php">FAQs</a>
+                                <a href="http://127.0.0.1/cgs2/courses.php">Courses</a>
+                                <!--<a href="http://127.0.0.1/cgs2/blog.php">Blogs</a>
+                                <a href="http://127.0.0.1/cgs2/daily_bytes.php">Daily bytes</a>
+                                <a href="http://127.0.0.1/cgs2/community.php">Community</a>-->
+								<a href="http://127.0.0.1/cgs2/blog.php">Career Roadmap</a>
+								<a href="http://127.0.0.1:5000/consultancy">Consultancy</a>
+                                <a href="http://127.0.0.1/cgs2/dataAnalysis.php">Trends</a>
                             </div>
                         </li>
 						<li><a href="#about">About Us</a></li>
-						<li><a href="http://127.0.0.1/php%20CAREERLY/contact.php">Contact Us</a></li>
-						<li><a href="http://127.0.0.1/php%20CAREERLY/logout.php"" >Log out</a></li>
+						<li><a href="http://127.0.0.1/cgs2/contact.php">Contact Us</a></li>
+						<li><a href="http://127.0.0.1/cgs2/logout.php"" >Log out</a></li>
 						
                         
 					</ul>
@@ -81,7 +82,7 @@
    <b><h1>Hey! The top job roles that matched your skills.....</h1><br><br></b>
    <div class="graph-cont">
    <h1>You can be a great:</h1>
-   <div class="bar bar1" ><a href="http://127.0.0.1/cgs/blog.php" style="text-decoration: none;"><font color="white">{{ job0 }}</a></font></div><br>
+   <div class="bar bar1" ><a href="http://127.0.0.1/cgs2/blog.php" style="text-decoration: none;"><font color="white">{{ job0 }}</a></font></div><br>
 	
 		
 		
@@ -89,7 +90,7 @@
 	 
 	 {%for key, value in final_res.items(): %}
 		{%if job0!=job_dict[value]%}
-		 <div class="bar bar2"><a href="http://127.0.0.1/cgs/blog.php" style="text-decoration: none;"><font color="white">{{job_dict[value]}}</a></font></div><br>
+		 <div class="bar bar2"><a href="http://127.0.0.1/cgs2/blog.php" style="text-decoration: none;"><font color="white">{{job_dict[value]}}</a></font></div><br>
 
 	 
 	 
@@ -106,7 +107,7 @@
 	 {%endfor%}
 	 
 	
-	<i><h2><p><a href="http://127.0.0.1/php%20CAREERLY/blog.php">To know more about these job roles click here!</a></p></h2></i>
+	<i><h2><p><a href="http://127.0.0.1/cgs2/blog.php">To know more about these job roles click here!</a></p></h2></i>
 	 
 	 
 	 
