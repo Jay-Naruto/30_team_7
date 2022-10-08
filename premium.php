@@ -1,4 +1,9 @@
+<?php
+// Initialize the session
+session_start();
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://js.stripe.com/v3/"></script>
     <title>Payment</title>
+    <script>
+      function premium(){
+        
+      }
+    </script>
     <style>
 .btn{
   background-color: black;
@@ -26,7 +36,8 @@
 
 </div>
  <div>
-  <button class="btn" id="checkout">Continue</button>
+  <!-- <button class="btn" onclick="premium()" id="checkout">Continue</button> -->
+  <input type="submit" id="checkout" onclick="premium()" class="btn" />
 
  </div>
   </div>
@@ -46,7 +57,7 @@
                         },
                     ],
                     mode: "subscription",
-                    successUrl:"http://localhost/cgs2/success.html",
+                    successUrl:"http://127.0.0.1:5000/success",
                     cancelUrl:"https://www.twitter.com/",
                     
 

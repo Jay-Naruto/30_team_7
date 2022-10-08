@@ -24,7 +24,11 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
+<style>
+	.dropdown-content{
+		background-color:black !important;
+	}
+</style>
     </head>
 	<body>
 
@@ -59,10 +63,14 @@
                             <a class="dropbtn" href="javascript:void(0)">Services <span>&#11167;</span></a>
                             <div class="dropdown-content">
 								<a href="http://127.0.0.1/cgs2/login.php">Career Prediction</a>
-                                <a href="http://127.0.0.1/cgs2/courses.php">Courses</a>
+                              
                                 <a href="http://127.0.0.1/cgs2/blog.php">Career Roadmap</a>
                                 <a href="http://127.0.0.1/cgs2/resume.php">Resume Maker</a>
                                 <a href="http://127.0.0.1:5000/consultancy">Consultancy</a>
+                                <a href="http://127.0.0.1/cgs2/dataAnalysis.php">Trends</a>
+
+                               
+
 
 								
                             </div>
@@ -75,6 +83,10 @@
 						<li>
 							<a href="register.php">Register</a>
 						</li>
+						<li>
+							<a href="expertlogin.php">Expert portal</a>
+						</li>
+						
 						
                         
 					</ul>
@@ -89,10 +101,14 @@
                             <a class="dropbtn" href="javascript:void(0)">Services <span>&#11167;</span></i></a>
                             <div class="dropdown-content">
 								<a href="http://127.0.0.1:5000/">Career Prediction</a>
-                                <a href="courses.php">Courses</a>
+                                
                                 <a href="blog.php">Career Roadmap</a>
                                 <a href="http://127.0.0.1/cgs2/resume.php">Resume Maker</a>
                                 <a href="http://127.0.0.1:5000/consultancy">Consultancy</a>
+                                <a href="http://127.0.0.1/cgs2/dataAnalysis.php">Trends</a>
+
+                               
+
 
 
 								

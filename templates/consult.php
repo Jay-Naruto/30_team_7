@@ -103,7 +103,8 @@ a{
                     <span class="card-text">{{i[3]}}</span>
                     <span class="card-text">
                         <a target="_blank" href='https://www.linkedin.com/in/{{i[1]}}'>
-                        {{i[1]}}
+                      {{i[1]}}
+                 
                         </a>
                     </span>
                     
@@ -113,7 +114,9 @@ a{
                 </div>
                  <hr></hr>
                 <div class="card-link">
-                    <a href="http://localhost/cgs2/premium.html" title="Read Full"><span style="color:black !important">Ask for consultancy</span></a>
+                    <a href="http://localhost/cgs2/premium.php" title="Read Full"><span style="color:black !important">Ask for consultancy</span></a>
+               
+
                 </div>
             </div>
           {%endfor%}

@@ -37,5 +37,4 @@ print('Accuracy=',scores[5]*100)
 
 pickle.dump(knn, open('careerlast.pkl','wb'))
 print('test file created')
-
-
+  
